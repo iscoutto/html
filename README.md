@@ -4,4 +4,4 @@
 ## Contents of this repository:
 Project       | Description
 ---------     | ------
-[hello-world](Projects/hello-world)           | First project with HTML and CSS
+[hello-world](Projects/hello-world) | First project with HTML and CSS
