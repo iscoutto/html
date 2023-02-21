@@ -44,6 +44,11 @@ header {
     position: relative;
 }
 
+.busca {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
 .busca,
 .menu-departamentos {
     background-color: #dcdcdc;
@@ -95,6 +100,9 @@ header {
     margin: 10px 0;
     padding: 10px;
     width: 445px;
+
+    border-radius: 4px;
+    box-shadow: inset 1px 1px 4px #999; /* destaque no box do painel */
 }
 
 .painel li {
@@ -112,6 +120,9 @@ header {
     text-transform: uppercase;
 
     margin-bottom: 10px;
+
+    text-shadow: 3px 3px 2px #FFF; /* destaque no título */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8); /* add translucência no título */
 }
 
 .painel a {
@@ -124,11 +135,13 @@ header {
 .novidades {
     float: left;
     background-color: #f5dcdc;
+    background: linear-gradient(#f5dcdc, #f4bebe); /* gradiente na cor do painel */
 }
 
 .mais-vendidos {
     float: right;
     background-color: #dcdcf5;
+    background: linear-gradient(#dcdcf5, #bebef4);
 }
 
 footer {
@@ -193,4 +206,55 @@ footer .container {
     border-left: 15px solid #900;
     border-bottom: 15px solid transparent;
     border-top: 15px solid transparent;
+}
+
+.menu-opcoes a:hover {
+    color: #007dc6;
+}
+
+.menu-opcoes a:active {
+    color: #867dc6;
+}
+
+.menu-departamentos li ul { /* não aparece a lista se não passar o mouse */
+    display: none;
+}
+
+.menu-departamentos li:hover ul { /* aparece a lista quando passa o mouse */
+    display: block;
+}
+
+.menu-departamentos ul ul li {
+    background-color: #dcdcdc;
+}
+
+.menu-departamentos li li a:before { /* adiciona o hífen na sublista */
+    content: '- ';
+}
+
+.menu-departamentos li li a:before {
+    content: '\272A'; /* caractere unicode que adiciona símbolos */
+    padding-right: 3px;
+}
+
+.painel h2:before {
+    content: '\2756';
+    padding-right: 5px;
+    opacity: 0.4;
+}
+
+.painel li:hover { /* mostra uma sombra quando o mouse passa por cima dos itens no painel */
+    background-color: rgba(255,255,255,0.8);
+    box-shadow: 0 0 5px #333;
+
+    -webkit-transition: box-shadow 0.7s ease-in;
+            transition: box-shadow 0.7s ease-in;
+
+    -webkit-transform: scale(1.2) rotate(-5deg);
+            transform: scale(1.2) rotate(-5deg);
+}
+
+.painel li {
+    -webkit-transition: box-shadow 0.7s ease-out;
+            transition: box-shadow 0.7s ease-out;
 }
